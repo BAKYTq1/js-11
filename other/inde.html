@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одежда</title>
+    <style>
+        .button {
+            background-color: #4a4a72; /* Синий цвет как на изображении */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #4a4a80; /* Более тёмный синий при наведении */
+        }
+        .info {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            display: none; /* Скрываем информацию по умолчанию */
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="showInfo()">Одежда</button>
+    <div class="info" id="info">
+        <p>Это информация о разделе "Одежда". Здесь можно найти описание товаров, размеры, цвета и многое другое.</p>
+    </div>
+
+    <script>
+        function showInfo() {
+            const info = document.getElementById('info');
+            if (info.style.display === 'none' || info.style.display === '') {
+                info.style.display = 'block'; // Показать информацию
+            } else {
+                info.style.display = 'none'; // Скрыть информацию
+            }
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Временный алерт</title>
+    <style>
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #f44336; /* Красный фон */
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .alert.hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function showAlert(message) {
+        // Создаём элемент алерта
+        const alertBox = document.createElement('div');
+        alertBox.className = 'alert';
+        alertBox.textContent = message;
+
+        // Добавляем его в документ
+        document.body.appendChild(alertBox);
+
+        // Убираем алерт через 2 секунды
+        setTimeout(() => {
+            alertBox.classList.add('hidden'); // Добавляем класс для исчезновения
+            setTimeout(() => alertBox.remove(), 500); // Удаляем элемент через 500 мс
+        }, 2000);
+    }
+const item = document
+    // Пример вызова
+    showAlert(`${item}`);
+</script>
+
+</body>
+</html>
